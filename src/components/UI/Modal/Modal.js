@@ -1,21 +1,25 @@
-import React from "react";
+import React, { Fragment } from "react";
 
 import "./Modal.css";
+import Backdrop from "../Backdrop/Backdrop";
 
 const Modal = ({ children, closeModal, show }) => {
   return (
-    <div
-      className="Modal"
-      style={{
-        transform: show ? "translateY(0)" : "translateY(100vh)",
-        opacity: show ? "1" : 0
-      }}
-    >
-      <strong className="closeModal" onClick={closeModal}>
-        x
-      </strong>
-      {children}
-    </div>
+    <Fragment>
+      <Backdrop show={show} closeBackdrop={closeModal} />
+      <div
+        className="Modal"
+        style={{
+          transform: show ? "translateY(0)" : "translateY(100vh)",
+          opacity: show ? "1" : 0
+        }}
+      >
+        <strong className="closeModal" onClick={closeModal}>
+          x
+        </strong>
+        {children}
+      </div>
+    </Fragment>
   );
 };
 
