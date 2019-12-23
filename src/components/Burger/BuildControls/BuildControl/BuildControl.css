@@ -6,6 +6,7 @@
 }
 
 .BuildControl button {
+    border-radius: 7px;
     display: block;
     font: inherit;
     padding: 5px;

@@ -17,7 +17,8 @@ const BuildControls = ({
   showQuantity,
   disabled,
   price,
-  purchasable
+  purchasable,
+  showModal
 }) => {
   return (
     <div className="BuildControls">
@@ -35,7 +36,11 @@ const BuildControls = ({
           label={ctrl.label}
         />
       ))}
-      <button disabled={!purchasable} className="OrderButton">
+      <button
+        onClick={showModal}
+        disabled={!purchasable}
+        className="OrderButton"
+      >
         ORDER NOW
       </button>
     </div>
