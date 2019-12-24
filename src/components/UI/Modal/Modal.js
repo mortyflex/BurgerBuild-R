@@ -14,9 +14,6 @@ const Modal = ({ children, closeModal, show }) => {
           opacity: show ? "1" : 0
         }}
       >
-        <strong className="closeModal" onClick={closeModal}>
-          x
-        </strong>
         {children}
       </div>
     </Fragment>

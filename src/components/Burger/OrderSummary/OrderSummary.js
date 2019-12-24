@@ -23,7 +23,7 @@ const OrderSummary = ({
       <ul>{ingredientSummary}</ul>
       <strong style={{ color: "red" }}>Total: ${total.toFixed(2)}</strong>
       <div style={{ float: "right" }}>
-        <p>
+        <p style={{ color: "#CF8F2E", textTransform: "uppercase" }}>
           <em>Continue to Checkout</em>
         </p>
         <Button clicked={closeSummary} btnType="Danger">
